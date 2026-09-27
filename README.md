@@ -1,10 +1,15 @@
 # Water Resources Engineering
 
+Coursework for CIVE70020 Water Resources Engineering at Imperial College London, analysing catchment 39008 near Oxford. The notebook covers catchment water balance, crop water demand, rainfall–runoff model calibration, groundwater comparison and reservoir storage estimation using the Waitt curve.
+
+The accompanying [report](report/report.pdf) presents the methods, results and discussion.
+
 ```text
 water-resources/
 ├── MajdYousofCWSubmission.ipynb  # Analysis, figures and results
 ├── model.py                     # Hydrological model and calibration functions
-├── report.pdf                   # Coursework report
+├── report/
+│   └── report.pdf               # Coursework report
 ├── data/
 │   ├── Catchment/               # CAMELS-GB catchment attributes
 │   │   └── shapefiles/
