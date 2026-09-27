@@ -1,0 +1,2 @@
+# Preserve supplied data bytes and their original line endings.
+data/** -text -whitespace

@@ -1,0 +1,39 @@
+[project]
+name = "water-resources"
+version = "0.1.0"
+description = "CIVE70020 catchment water balance and hydrological model calibration"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "geopandas>=1.0,<2",
+    "matplotlib>=3.9,<4",
+    "numba==0.60.0",
+    "numpy==2.0.2",
+    "pandas==2.2.3",
+    "scipy==1.14.1",
+    "seaborn>=0.13,<0.14",
+    "jupyterlab>=4.4,<5",
+    "nbconvert>=7.16,<8",
+    "ipykernel>=6.29,<8",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.16.9,<1", "pyright>=1.1.414,<2"]
+
+[tool.uv]
+package = false
+constraint-dependencies = ["pillow>=12.3.0,<13"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = ["outputs"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP", "C4"]
+
+[tool.pyright]
+include = ["model.py"]
+pythonVersion = "3.12"
+typeCheckingMode = "standard"
+venvPath = "."
+venv = ".venv"
